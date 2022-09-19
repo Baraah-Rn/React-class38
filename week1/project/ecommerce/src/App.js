@@ -12,17 +12,28 @@ function App() {
   const [filteredProducts, setFilteredProducts] = useState(products)
 
 
-const selectedCategory = ()=>{
-  console.log("000")
-}
+  const selectedCategory = (selectedCate) => {
+    if (category === selectedCate) {
+      setCategory(null)
+      setFilteredProducts(products)
+    } else {
+      setCategory(selectedCate)
+      setFilteredProducts(
+        products.filter(
+          (p) => p.category === selectedCate.replace("FAKE: ", "")
+        )
+      );
+    }
+  };
+
   return (
     <>
       <h1>Products</h1>
-      <Navbar category ={allCategories}
-      selected = {category}
-     selectedCategory={selectedCategory}
+      <Navbar categories={allCategories}
+        selected={category}
+        selectedCategory={selectedCategory}
       />
-      <ProductList  products ={filteredProducts}/>
+      <ProductList products={filteredProducts} />
 
     </>
 

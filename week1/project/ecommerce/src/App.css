@@ -1,9 +1,9 @@
-navbar ul {
+.navbar ul {
     display: flex;
     
 }
 
-navbar li {
+.navbar li {
     list-style: none;
     background-color: #efeff0;
     border: none;
@@ -12,12 +12,16 @@ navbar li {
     margin: 4px;
     padding: 12px;
 }
-navbar li:hover{
+.navbar li:hover{
 background-color: #bdbdc1;
 }
-navbar li.selected-category{
-    background-color: #bdbdc1;
-    }
+.navbar li.selected-category{
+  background-color: #bdbdc1;
+ }
+
+
+
+
 .products{
     display: flex;
     flex-wrap: wrap;

@@ -2,11 +2,11 @@ import React from 'react';
 
 
 
-const Navbar = ({ categories, selectedCategory, selected }) => {
+const Navbar = ({ categories, selected, selectedCategory }) => {
 
   return (
     <div className='navbar'>
-      <ul >
+      <ul className='navbar-ul'>
         {categories.map((category) =>
           <li key={category} 
           onClick={() => selectedCategory(category)}

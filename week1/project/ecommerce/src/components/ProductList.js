@@ -1,13 +1,27 @@
- import React from 'react';
+import React from 'react';
 
+const ProductList = ({ products }) => {
 
-
- const ProductList = () => {
-  
   return (
-    <ul>
-      
-    </ul>
-  )
+    
+      <ul className='products'>
+        {products.map((product) => {
+          const { id, image, title } = product;
+          return (
+            <>
+              <li className="product-list">
+                <div key={id} className='product-collection'>
+                  <img className='product-img' src={image} alt={title} />
+                  <h5>{title}</h5>
+                </div>
+              </li>
+            </>
+          )
+        }
 
- export default ProductList
+        )}
+      </ul>
+  )
+}
+
+export default ProductList
