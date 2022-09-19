@@ -1,4 +1,10 @@
-.category-collections {
+navbar ul {
+    display: flex;
+    
+}
+
+navbar li {
+    list-style: none;
     background-color: #efeff0;
     border: none;
     cursor: pointer;
@@ -6,9 +12,12 @@
     margin: 4px;
     padding: 12px;
 }
-.category-collections:hover{
+navbar li:hover{
 background-color: #bdbdc1;
 }
+navbar li.selected-category{
+    background-color: #bdbdc1;
+    }
 .products{
     display: flex;
     flex-wrap: wrap;
