@@ -1,0 +1,34 @@
+.category-collections {
+    background-color: #efeff0;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    margin: 4px;
+    padding: 12px;
+}
+.category-collections:hover{
+background-color: #bdbdc1;
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    padding-inline-start: 0;
+}
+.product-list {
+    margin: 2rem;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.product-list h3{
+    background-color: black;
+  color: azure;
+}
+.product-img{
+    margin: auto;
+    max-height: 250px;
+    object-fit: contain;
+    width: 100%;
+}
