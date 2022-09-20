@@ -20,7 +20,7 @@ function App() {
       setCategory(selectedCate)
       setFilteredProducts(
         products.filter(
-          (p) => p.category === selectedCate.replace("FAKE: ", "")
+          (data) => data.category === selectedCate.replace("FAKE: ", "")
         )
       );
     }
