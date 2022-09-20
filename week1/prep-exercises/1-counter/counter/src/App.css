@@ -1,0 +1,28 @@
+.btn-div{
+    margin: 5rem;
+    
+}
+.btn{
+    margin: 1rem;
+    pad: 1rem;
+    width: 100px;
+    border: none;
+}
+
+.add{
+    background-color:green;
+    color: aliceblue;
+}
+
+.min{
+    background-color: red;
+    color: aliceblue;
+}
+.result {
+    margin: 5rem;
+    margin: 2rem;
+    margin-left: 13rem;
+    font-size: x-large;
+    
+
+}
