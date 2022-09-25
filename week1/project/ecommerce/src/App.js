@@ -13,17 +13,12 @@ function App() {
 
 
   const selectedCategory = (selectedCate) => {
-    if (category === selectedCate) {
-      setCategory(null)
-      setFilteredProducts(products)
-    } else {
       setCategory(selectedCate)
       setFilteredProducts(
         products.filter(
           (data) => data.category === selectedCate.replace("FAKE: ", "")
         )
       );
-    }
   };
 
   return (

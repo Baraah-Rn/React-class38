@@ -10,7 +10,8 @@ const Navbar = ({ categories, selected, selectedCategory }) => {
         {categories.map((category) =>
           <li key={category} 
           onClick={() => selectedCategory(category)}
-          className={selected === category ? 'selected-category' : null}>{category}</li>
+         className={selected === category && 'selected-category'}
+          >{category}</li>
         )}
       </ul>
     </div>
