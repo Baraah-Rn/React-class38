@@ -1,51 +1,115 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+}
+
 .App {
+  margin: 1rem;
+}
+
+.Category-container {
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.category-item {
+  padding: 2rem;
+  margin: 2px;
+  font-size: 25px;
+  background-color: #dadae6;
+  border: none;
+}
+
+.category-item:hover {
+  background-color: #dcdceb;
+  cursor: pointer;
+}
+
+.category-item-selected {
+  background-color: #b1b1c1;
+  padding: 2rem;
+  margin: 2px;
+  font-size: 25px;
+  border: none;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+.product-title {
+  padding: 2rem;
+  ;
+  font-size: 20px;
   text-align: center;
 }
 
-.navbar ul {
-  display: flex;
-  
+.product-image-container {
+  position: relative;
 }
 
-.navbar li {
-  list-style: none;
-  background-color: #efeff0;
-  border: none;
-  cursor: pointer;
-  font-weight: 700;
-  margin: 4px;
-  padding: 12px;
-}
-.navbar li:hover{
-background-color: #bdbdc1;
-}
-.navbar li.selected-category{
-background-color: #bdbdc1;
-}
-
-
-
-
-.products{
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin-block-end: 0;
-  margin-block-start: 0;
-  padding-inline-start: 0;
-}
-.product-list {
-  margin: 2rem;
-  display: list-item;
-  text-align: -webkit-match-parent;
-}
-.product-list h3{
-  background-color: black;
-color: azure;
-}
-.product-img{
+.product-image {
   margin: auto;
-  max-height: 250px;
-  object-fit: contain;
+  max-height: 200px;
   width: 100%;
+  object-fit: contain;
+}
+
+.product {
+  margin: 1rem;
+}
+
+.product-details {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.product-description {
+  align-self: center;
+  text-align: justify;
+  padding-top: 1rem;
+}
+
+@media (min-width: 600px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product-description {
+    align-self: center;
+    grid-row: 1;
+    padding: 2rem;
+  }
+
+  .product-image {
+    max-width: auto;
+  }
+
+  .item {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-description {
+    align-self: center;
+  }
+
+  .item {
+    padding: 1.5rem;
+  }
 }
