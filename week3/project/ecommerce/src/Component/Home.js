@@ -2,6 +2,7 @@ import { useState } from "react";
 import CategoryList from "./CategoryList"
 import Products from "./Products"
 import useFetchData from "../Hook/useFetch";
+import Header from "./Header";
 
 const Home = () => {
   const [category, setCategory] = useState("allCategories");
@@ -12,10 +13,7 @@ const Home = () => {
 
   return (
     <div className="App">
-      <header className="header">
-        <h1>Products</h1>
-      </header>
-
+     <Header title ="Products"/>
       <CategoryList
         allCategories={categories}
         setCategory={setCategory}

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import useFetchData from "../Hook/useFetch"
 import Loading from "./Loading";
 import Error from "./Error";
+import Header from "./Header";
 
 const ProductDetails = () => {
     const [product, setProduct] = useState({});
@@ -16,7 +17,8 @@ const ProductDetails = () => {
 
     return (
         <div className="App">
-            <h1>{product.title}</h1>
+            <Header title={product.title} />
+
             <div className="product-details">
                 <img className="product-image" src={product.image} alt={product.title} />
                 <p className="product-description">{product.description}</p>
@@ -27,3 +29,5 @@ const ProductDetails = () => {
 };
 
 export default ProductDetails;
+
+// details of item

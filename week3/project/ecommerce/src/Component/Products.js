@@ -26,3 +26,5 @@ const Products = ({ category }) => {
   );
 };
 export default Products;
+
+// bigger div to contain all 
