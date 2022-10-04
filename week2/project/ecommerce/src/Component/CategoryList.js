@@ -5,39 +5,39 @@ import Error from "./Error";
 function CategoryList({ allCategories, setCategory, loading, error }) {
   const [activeButton, setActiveButton] = useState(null);
 
-  const toggle = (index, item) => {
-    if (activeButton === index) {
+  const toggle = (select, item) => {
+    if (activeButton === select) {
       setCategory("allCategories");
       setActiveButton(null);
     } else {
       setCategory(item);
-      setActiveButton(index);
+      setActiveButton(select);
     }
   };
 
-  const activeToggle = (index) => {
-    if (activeButton === index) {
+  const activeToggle = (selected) => {
+    if (activeButton === selected) {
       return "category-item-selected";
     } else {
       return "category-item";
     }
   };
 
-  if (loading) return <Loading />;
-  if (error) return <Error text="Error with loading the categories." />;
+  if (loading){ return <Loading />;}
+  if (error) {return <Error text="Error with loading the categories." />;}
 
   return (
     <div className="Category-container">
-      {allCategories.map((item, index) => {
+      {allCategories.map((items, selectCat) => {
         return (
           <button
-            key={index}
-            className={activeToggle(index)}
+            key={selectCat}
+            className={activeToggle(selectCat)}
             onClick={() => {
-              toggle(index, item);
+              toggle(selectCat, items);
             }}
           >
-            {item}
+            {items}
           </button>
         );
       })}
